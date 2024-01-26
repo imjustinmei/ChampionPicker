@@ -6,9 +6,3 @@ from django.core.management import call_command
 class PartypesConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'partypes'
-
-    def ready(self):
-        post_migrate.connect(self.loadData, sender=self)
-
-    def loadData(self, sender, **kwargs):
-        call_command('loaddata', 'partypes/partypes.json')
