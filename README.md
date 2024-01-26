@@ -10,11 +10,6 @@ Uses champion and skin data from Riot's [ddragon](https://ddragon.leagueoflegend
 ![Champions](https://github.com/imjustinmei/ChampionPicker/blob/main/images/champions.png)
 ![Champion](https://github.com/imjustinmei/ChampionPicker/blob/main/images/champion.png)
 
-## usage
-
-start server via `python manage.py runserver` in `/champion_picker/`\
-navigate to [localhost](http://127.0.0.1:8000/)
-
 ## installation
 
 1. `git clone https://github.com/imjustinmei/ChampionPicker.git`
@@ -22,7 +17,13 @@ navigate to [localhost](http://127.0.0.1:8000/)
 3. `python -m venv env`
 4. `source env/bin/activate` or `source env/Scripts/activate`
 5. `pip install -r requirements.txt`
-6. `python manage.py migrate` in `/champion_picker/`
+6. populate `champion_picker/champion_picker/secrets.json`
+7. `python manage.py migrate` in `/champion_picker/`
+
+## usage
+
+start server via `python manage.py runserver` in `/champion_picker/`\
+navigate to [localhost](http://127.0.0.1:8000/)
 
 # disclaimer
 
