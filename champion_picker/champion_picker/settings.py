@@ -14,6 +14,7 @@ import os
 import json
 from pathlib import Path
 from django.core.exceptions import ImproperlyConfigured
+from django.views.static import serve
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,9 +40,9 @@ def get_secret(setting, secrets=secrets):
 SECRET_KEY = 'django-insecure-y%+#%bpbx%6d_lwd-6*!$2lo5t_^y4gl_h9n#i_f8*-=c%7crz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -51,7 +52,6 @@ INSTALLED_APPS = [
     'classes',
     'partypes',
     'champions',
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -139,6 +139,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

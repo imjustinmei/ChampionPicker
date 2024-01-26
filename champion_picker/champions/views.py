@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.db import connection
 from django.http import JsonResponse
 from django.core.serializers import serialize
@@ -65,7 +65,8 @@ def index(request):
 def champion(request, name):
     data = Champion.objects.get(name=name)
     id = data.id
-    url = f'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champions/{id}.json'
+    url = f'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champions/{
+        id}.json'
     skins = Skin.objects.filter(champion_id=id)
 
     if skins.count() == 0:
@@ -85,3 +86,14 @@ def champion(request, name):
 
     context = {"name": name, "data": data, "skins": skins_data}
     return render(request, "champion.html", context)
+
+
+def error_404(request, exception):
+    context = {'code': 404, 'message': 'page not found'}
+    return render(request, "error.html", context)
+
+
+def error_500(request):
+    context = {'code': 500,
+               'message': 'data not found'}
+    return render(request, "error.html", context)

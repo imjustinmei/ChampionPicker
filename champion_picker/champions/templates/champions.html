@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% load static %} {% block head %}
-<link rel="stylesheet" href="{% static 'css/champions.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/champions.css' %}" />
 {% endblock head %} {% block content %}
 <div id="top">
   <h1 id="main">Find Your Champion</h1>
@@ -34,5 +34,5 @@
   {% endfor %}
   <div id="none">no champion found try another query</div>
 </div>
-<script src="{% static 'js/champions.js' %}"></script>
+<script type="application/javascript" src="{% static 'js/champions.js' %}"></script>
 {% endblock content %}

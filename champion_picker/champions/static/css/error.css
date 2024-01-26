@@ -1,0 +1,23 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 4em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+#code {
+  font-size: 1.5em;
+}
+
+#link {
+  color: #71c9ce;
+}
+
+#link:hover {
+  color: #a6e3e9;
+}

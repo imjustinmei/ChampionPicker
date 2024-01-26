@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% load static %} {% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/error.css' %}" />
+{% endblock head %} {% block content %}
+<div id="container">
+  <div id="code">error {{ code }}</div>
+  <div id="message">{{ message }}</div>
+  <div id="link"><a href="/">return</a></div>
+</div>
+{% endblock content%}
