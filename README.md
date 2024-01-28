@@ -22,9 +22,9 @@ Uses champion and skin data from Riot's [ddragon](https://ddragon.leagueoflegend
 
 ## usage
 
-start server via `python manage.py runserver` in `/champion_picker/`\
+start server via `python manage.py runserver --insecure` in `/champion_picker/`\
 navigate to [localhost](http://127.0.0.1:8000/)
 
-# disclaimer
+## disclaimer
 
 Champion Picker is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc
